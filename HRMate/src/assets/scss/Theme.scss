@@ -1,0 +1,9 @@
+// @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '/node_modules/bootstrap/scss/bootstrap.scss';
+
+// Bootstrap variables
+@import "../scss/variable";
+@import './components/user';
+@import './components/custom_calender';
+@import "./components/badge";
+@import "bootstrap/scss/bootstrap";

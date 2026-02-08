@@ -1,0 +1,68 @@
+input[type="password"] {
+  -webkit-text-security: disc;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+// donut loading
+.tasks-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  .card-body {
+    padding: 18px;
+  }
+}
+
+/* each row */
+.task-item {
+  background: #f3f4f6;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* title */
+.task-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #111827;
+}
+
+/* subtitle */
+.task-sub {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* progress circle */
+.task-circle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+}
