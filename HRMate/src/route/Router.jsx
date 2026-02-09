@@ -3,7 +3,7 @@ import AuthLayout from "../layout/AuthLayout";
 import RootLayout from "../layout/RootLayout";
 import Sign_In from "../pages/Sign_In";
 import Sign_Up from "../pages/Sign_Up";
-import Dashboard from "../pages/DashBoard";
+import Dashboard from "../pages/Dashboard";
 import Schedule from "../pages/Schedule";
 import Payroll from "../pages/Payroll";
 import Employees from "../pages/Employees";
