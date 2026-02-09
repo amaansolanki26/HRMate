@@ -10,7 +10,7 @@ const Schedule_Calender = () => {
   return (
     <Container className="bg-white p-4 rounded-4 shadow-sm mx-auto schedule-panel" style={{ maxWidth: '400px' }}>
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h5 className="m-0 fw-bold">Schedule</h5>
+        <h5 className="m-0 ">Schedule</h5>
         <Button variant="link" className="text-secondary text-decoration-none p-0 small">See All</Button>
       </div>
 
@@ -32,7 +32,7 @@ const Schedule_Calender = () => {
       </h6>
       
       {Schedule.map((item, index) => (
-        <Row key={index} className="schedule-row g-0 align-items-start mb-4">
+        <Row key={index} className="schedule-row g-0 align-items-start mb-4 p-1">
           <Col xs={4} className="time-column text-muted small">
             {item.time}
           </Col>
