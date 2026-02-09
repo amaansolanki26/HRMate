@@ -1,7 +1,6 @@
-import { Card, Dropdown } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { tasks } from "../data/Task";
 import { ThreeDots } from "react-bootstrap-icons";
-
 
 function Circle({ value }) {
   return (
@@ -26,7 +25,7 @@ export default function TasksCard() {
       </div>
 
         {tasks.map((t, i) => (
-          <div key={i} className="task-item">
+          <div key={i} className="task-item p-3">
             <div>
               <div className="task-title">{t.title}</div>
               <div className="task-sub">

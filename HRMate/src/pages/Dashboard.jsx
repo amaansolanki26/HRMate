@@ -1,4 +1,4 @@
-import {  Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { dashboardData } from "../data/dashboard";
 import { employees } from "../data/employees";
 import KPIChart from "../component/KPIChart";
@@ -14,50 +14,45 @@ import Dashboard_Card from "../component/Dashboard_Card";
 import { Schedule } from "../data/Schedule_data";
 
 const Dashboard = () => {
-  
-
   return (
     <Container fluid className="p-4">
-      <Dashboard_Card/>
-
-     <Row className="g-4">
-
-    <Col lg={9}>
-      
-      <Row className="g-4 mb-4">
-        <Col lg={7}>
-          <KPIChart data={dashboardData.kpi} />
-        </Col>
-        <Col lg={5}>
-          <Attendance_chart data={dashboardData.attendance} />
-        </Col>
-      </Row>
+      <Dashboard_Card />
 
       <Row className="g-4">
-        <Col lg={4}>
-          <TasksCard />
-        </Col>
-        <Col lg={4}>
-         <SatisfactionCard data={satisfactionData}/>
-        </Col>
-        <Col lg={4}>
-         <EmploymentStatus data={employees}/>
-        </Col>
-      </Row>
+        <Col lg={9}>
+          <Row className="g-4 mb-4">
+            <Col lg={7}>
+              <KPIChart data={dashboardData.kpi} />
+            </Col>
+            <Col lg={5}>
+              <Attendance_chart data={dashboardData.attendance} />
+            </Col>
+          </Row>
 
-    </Col>
-    <Col lg={3}>
-      <Schedule_Calender data={Schedule}/>
-    </Col>
-    <Row className="g-1">
-      <Col md={9}>
-        <EmployeeOverview/> 
-      </Col>
-      <Col md={3}>
-        <RecentActivity/> 
-      </Col>
-    </Row>
-  </Row>
+          <Row className="g-4">
+            <Col lg={4}>
+              <TasksCard />
+            </Col>
+            <Col lg={4}>
+              <SatisfactionCard data={satisfactionData} />
+            </Col>
+            <Col lg={4}>
+              <EmploymentStatus data={employees} />
+            </Col>
+          </Row>
+        </Col>
+        <Col lg={3}>
+          <Schedule_Calender data={Schedule} />
+        </Col>
+        <Row className="g-1">
+          <Col md={9}>
+            <EmployeeOverview />
+          </Col>
+          <Col md={3}>
+            <RecentActivity />
+          </Col>
+        </Row>
+      </Row>
     </Container>
   );
 };

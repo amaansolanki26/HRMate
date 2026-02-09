@@ -7,9 +7,9 @@ const Dashboard_Card = () => {
     const { user } = useSelector((state) => state.auth);
   const totalEmployees = employees.length;
   return (
-    <Row className="mb-4 g-4">
-            <Col md={9} className="bg-success p-1 rounded-4 ">
-           <Row className="align-items-center p-3">
+    <Row className="mb-4 g-1 mx-0">
+            <Col md={9} className="bg-success  rounded-4 ">
+           <Row className="align-items-center p-4">
             <Col md={4}>
               <p className="text-muted small text-nowrap mb-4 ">
                 Tuesday, February 10, 2026
@@ -171,16 +171,17 @@ const Dashboard_Card = () => {
             </Col>
           </Row>
         </Col>
-        <Col md={3} className="rounded-4">
-          <Row className="h-100 g-0 rounded-4 overflow-hidden">
-            <Col md={3} className="bg-success"></Col>
+        <Col md={3} className="rounded-4 ">
+          <Row className="h-100 rounded-4 overflow-hidden">
+            <Col md={1}></Col>
+            <Col md={2} className="bg-success rounded-start-4"></Col>
             <Col md={9} className="bg-warning p-2 ">
               <p className="fw-semibold fs-5 mb-3">Unlock New Features!</p>
               <p className="text-muted small mb-4">
                 Dive into our advanced analytics and customizable
                 reports—designed to streamline your HR tasks.
               </p>
-              <Button className="btn-primary text-white rounded-3 px-4 py-2">
+              <Button className="btn-primary text-white rounded-3 mt-4 px-4 py-2">
                 Upgrade Now
               </Button>
             </Col>
