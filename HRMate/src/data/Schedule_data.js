@@ -1,4 +1,4 @@
-[
+export const Schedule=[
   { 
     "time": "9:00 AM to 9:30 AM", 
     "title": "Morning Briefing", 

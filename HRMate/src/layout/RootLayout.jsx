@@ -10,7 +10,11 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import {  Bell, ChatDots, ChevronDown, Gear, Search } from "react-bootstrap-icons";
+import {  Bell, ChatDots, ChevronDown, Gear, Search  ,Facebook,
+  Instagram,
+  Linkedin,
+  TwitterX,
+  Youtube} from "react-bootstrap-icons";
 import { useRef, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useDispatch } from "react-redux";
@@ -36,10 +40,10 @@ const navigate = useNavigate();
   };
 
   return (
-    <Container className="container-bg">
+    <Container fluid className="container-bg">
       <Row>
         <Col>
-          <Navbar>
+          <Navbar expand="lg">
             <Navbar.Brand as={NavLink} to="/dashboard" className="fw-bold">
               <Image src="src\assets\Logo.svg" height="28" className="" />
             </Navbar.Brand>
@@ -99,7 +103,7 @@ const navigate = useNavigate();
                 <ChatDots size={18} className="text-secondary" />
                 <Bell size={18} className="text-secondary" />
                 
-                <Col>
+                <div>
                   <Dropdown show={show} ref={dropdownRef}>
                     <Dropdown.Toggle
                       as="div"
@@ -116,14 +120,14 @@ const navigate = useNavigate();
                       <ChevronDown/>
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
+                    <Dropdown.Menu align="end">
                       <Dropdown.Item as="button" onClick={handleLogout}>
                         {" "}
                         Logout
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                </Col>
+                </div>
               </div>
             </Navbar.Collapse>
           </Navbar>
@@ -131,6 +135,28 @@ const navigate = useNavigate();
       </Row>
       <Row>
         <Outlet />
+        <Row>
+      <Col md={8} className="d-flex flex-wrap align-items-center gap-3">
+            <span className="text-muted small">
+              Copyright © 2024 HRMate
+            </span>
+
+            <a href="#"  className="footer-link text-danger no-underline">Privacy Policy</a>
+            <a href="#" className="footer-link text-danger no-underline">Term and conditions</a>
+            <a href="#" className="footer-link text-danger no-underline">Contact</a>
+          </Col>
+
+          <Col
+            md={4}
+            className="d-flex justify-content-md-end justify-content-start gap-3 mt-2 mt-md-0"
+          >
+            <Facebook className="footer-icon text-danger" />
+            <TwitterX className="footer-icon text-danger" />
+            <Instagram className="footer-icon text-danger" />
+            <Youtube className="footer-icon text-danger" />
+            <Linkedin className="footer-icon text-danger" />
+          </Col>
+    </Row>
       </Row>
     </Container>
   );

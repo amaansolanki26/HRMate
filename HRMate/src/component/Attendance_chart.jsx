@@ -36,7 +36,7 @@ export const Attendance_chart = ({ data }) => {
       </div>
 
       <div className="d-flex gap-4 mb-3 small text-muted">
-        <div className="d-flex align-items-center gap-2">
+        <div className="d-flex align-items-center gap-4">
           <span
             className="rounded-circle"
             style={{ width: 8, height: 8, background: "#B9E6FF" }}

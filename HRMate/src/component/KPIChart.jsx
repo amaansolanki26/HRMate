@@ -4,7 +4,7 @@ import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "rec
 
 export const KPIChart = ({data}) => {
   return (
-    <Card className="border-0 rounded-4 p-3 shadow-sm">
+    <Card className="border-0 rounded-4 p-3  shadow-sm">
             <div className="d-flex justify-content-between align-items-center ">
               <h6 className="fw-semibold ">Average Team KPI</h6>
 

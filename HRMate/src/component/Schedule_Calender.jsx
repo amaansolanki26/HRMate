@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
-import scheduleData from '../data/Schedule_data.json'; 
 import 'react-calendar/dist/Calendar.css';
+import { Schedule } from '../data/Schedule_data';
 
 const Schedule_Calender = () => {
   const [selectedDate, setSelectedDate] = useState(new Date(2026, 1, 10));
@@ -31,7 +31,7 @@ const Schedule_Calender = () => {
         {selectedDate.getDate()} {selectedDate.toLocaleString('default', { month: 'long' })} {selectedDate.getFullYear()}
       </h6>
       
-      {scheduleData.map((item, index) => (
+      {Schedule.map((item, index) => (
         <Row key={index} className="schedule-row g-0 align-items-start mb-4">
           <Col xs={4} className="time-column text-muted small">
             {item.time}
@@ -46,7 +46,7 @@ const Schedule_Calender = () => {
           </Col>
         </Row>
       ))}
-    </Container>
+    </Container> 
   );
 };
 

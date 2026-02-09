@@ -1,12 +1,9 @@
-// custom-calendar.scss
-
 .custom-calendar-container {
   .react-calendar {
     width: 100% !important;
     border: none !important;
     font-family: inherit !important;
 
-    // Navigation (Month/Year selector)
     &__navigation {
       margin-bottom: 10px !important;
       
@@ -23,7 +20,6 @@
       }
     }
 
-    // Weekday labels
     &__month-view__weekdays__weekday {
       text-decoration: none !important;
       font-size: 0.75rem !important;
@@ -35,13 +31,11 @@
       }
     }
 
-    // Individual day tiles
     &__tile {
       padding: 10px 5px !important;
       background: none !important;
       font-size: 0.85rem !important;
 
-      // The Active/Selected Day (Matches your screenshot)
       &--active {
         background: transparent !important;
         color: #ff4d4d !important; 
@@ -54,8 +48,6 @@
         background-color: #f8f9fa !important;
         border-radius: 5px;
       }
-
-      // Dates from previous/next months
       &--neighboringMonth {
         color: #dee2e6 !important;
       }

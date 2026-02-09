@@ -1,206 +1,24 @@
-import { useSelector } from "react-redux";
-import { Button, Card, Col, Container, Dropdown, Row } from "react-bootstrap";
-import { Tooltip, ResponsiveContainer, PieChart, Pie } from "recharts";
-
+import {  Col, Container, Row } from "react-bootstrap";
 import { dashboardData } from "../data/dashboard";
 import { employees } from "../data/employees";
-import {
-  EmojiSmile,
-  People,
-  PersonDashFill,
-  ThreeDots,
-} from "react-bootstrap-icons";
 import KPIChart from "../component/KPIChart";
 import Attendance_chart from "../component/Attendance_chart";
 import Schedule_Calender from "../component/Schedule_Calender";
 import TasksCard from "../component/Tasks";
+import SatisfactionCard from "../component/Satisfaction_chart";
+import { satisfactionData } from "../data/Satisfaction_data";
+import EmploymentStatus from "../component/Employee_Status";
+import RecentActivity from "../component/Recent_Activity";
+import EmployeeOverview from "../component/Employee_Overview";
+import Dashboard_Card from "../component/Dashboard_Card";
+import { Schedule } from "../data/Schedule_data";
 
 const Dashboard = () => {
-  const { user } = useSelector((state) => state.auth);
-  const totalEmployees = employees.length;
+  
 
   return (
     <Container fluid className="p-4">
-      <Row className="mb-4 g-4">
-        <Col md={9} className="bg-success p-2 rounded-4 ">
-          <Row className="align-items-center p-3">
-            <Col md={4}>
-              <p className="text-muted small text-nowrap mb-4 ">
-                Tuesday, February 10, 2026
-              </p>
-              <br />
-              <h4 className="fw-semibold text-nowrap text-truncate pt-4 ">
-                Hello, {user?.fullName?.split(" ")[0]}! 👋
-              </h4>
-              <p className="text-muted small text-nowrap ">
-                Track and manage your team progress here
-              </p>
-            </Col>
-
-            <Col md={8}>
-              <Row className="justify-content-end ">
-                <Col md={3} className="flex-grow-1">
-                  <Card className="p-3  border-0 rounded-4 position-relative overflow-hidden">
-                    <svg
-                      className="position-absolute top-50 end-0 translate-middle-y"
-                      width="145"
-                      height="85"
-                      viewBox="0 0 175 65"
-                      fill="none"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      <path
-                        d="
-                        M104 18
-                        A25 25 0 0 1 98 67
-                        L98 18
-                        Z
-                      "
-                        fill="#AFE2FF"
-                        opacity="0.18"
-                      />
-
-                      <path
-                        d="
-                        M124 8
-                        A28 28 0 0 1 129 77
-                        L129 8
-                        Z
-                      "
-                        fill="#AFE2FF"
-                        opacity="0.26"
-                      />
-                    </svg>
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="bg-primary box d-flex align-items-center justify-content-center">
-                        <People className="text-light" size={18} />
-                      </div>
-                      <ThreeDots
-                        className="text-secondary cursor-pointer"
-                        size={18}
-                      />
-                    </div>
-                    <Row className="mt-4">
-                      <h3 className="fw-semibold">{totalEmployees}</h3>
-                      <small className="text-muted">Total Employees</small>
-                    </Row>
-                  </Card>
-                </Col>
-                <Col md={3} className="flex-grow-1">
-                  <Card className="p-3 border-0 rounded-4 position-relative overflow-hidden">
-                    <svg
-                      className="position-absolute top-50 end-0 translate-middle-y"
-                      width="145"
-                      height="85"
-                      viewBox="0 0 175 65"
-                      fill="none"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      <path
-                        d="
-                        M104 18
-                        A25 25 0 0 1 98 67
-                        L98 18
-                        Z
-                      "
-                        fill="#AFE2FF"
-                        opacity="0.18"
-                      />
-
-                      <path
-                        d="
-                        M124 8
-                        A28 28 0 0 1 129 77
-                        L129 8
-                        Z
-                      "
-                        fill="#AFE2FF"
-                        opacity="0.26"
-                      />
-                    </svg>
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="bg-primary box d-flex align-items-center justify-content-center">
-                        <PersonDashFill className="text-light" size={18} />
-                      </div>
-                      <ThreeDots
-                        className="text-secondary cursor-pointer"
-                        size={18}
-                      />
-                    </div>
-                    <Row className="mt-4">
-                      <h3 className="fw-semibold">32%</h3>
-                      <small className="text-muted">Turnover Rate</small>
-                    </Row>
-                  </Card>
-                </Col>
-
-                <Col md={3} className="flex-grow-1">
-                  <Card className="p-3 border-0 rounded-4 position-relative overflow-hidden">
-                    <svg
-                      className="position-absolute top-50 end-0 translate-middle-y"
-                      width="145"
-                      height="85"
-                      viewBox="0 0 175 65"
-                      fill="none"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      <path
-                        d="
-                          M104 18
-                          A25 25 0 0 1 98 67
-                          L98 18
-                          Z
-                        "
-                        fill="#AFE2FF"
-                        opacity="0.18"
-                      />
-
-                      <path
-                        d="
-                          M124 8
-                          A28 28 0 0 1 129 77
-                          L129 8
-                          Z
-                        "
-                        fill="#AFE2FF"
-                        opacity="0.26"
-                      />
-                    </svg>
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="bg-primary box d-flex align-items-center justify-content-center">
-                        <EmojiSmile className="text-light" size={18} />
-                      </div>
-                      <ThreeDots
-                        className="text-secondary cursor-pointer"
-                        size={18}
-                      />
-                    </div>
-                    <Row className="mt-4">
-                      <h3 className="fw-semibold">78%</h3>
-                      <small className="text-muted">Happiness Rate</small>
-                    </Row>
-                  </Card>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Col>
-        <Col md={3} className="rounded-4">
-          <Row className="h-100 g-0 rounded-4 overflow-hidden">
-            <Col md={3} className="bg-success"></Col>
-            <Col md={9} className="bg-warning p-2 ">
-              <p className="fw-semibold fs-5 mb-3">Unlock New Features!</p>
-              <p className="text-muted small mb-4">
-                Dive into our advanced analytics and customizable
-                reports—designed to streamline your HR tasks.
-              </p>
-              <Button className="btn-primary text-white rounded-3 px-4 py-2">
-                Upgrade Now
-              </Button>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <Dashboard_Card/>
 
      <Row className="g-4">
 
@@ -220,10 +38,10 @@ const Dashboard = () => {
           <TasksCard />
         </Col>
         <Col lg={4}>
-         
+         <SatisfactionCard data={satisfactionData}/>
         </Col>
         <Col lg={4}>
-         
+         <EmploymentStatus data={employees}/>
         </Col>
       </Row>
 
@@ -231,9 +49,16 @@ const Dashboard = () => {
 
     
     <Col lg={3}>
-      <Schedule_Calender />
+      <Schedule_Calender data={Schedule}/>
     </Col>
-
+    <Row>
+      <Col md={9}>
+        <EmployeeOverview/> 
+      </Col>
+      <Col md={3}>
+        <RecentActivity/> 
+      </Col>
+    </Row>
   </Row>
     </Container>
   );

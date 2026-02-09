@@ -1,14 +1,13 @@
 import { Card, Dropdown } from "react-bootstrap";
+import { tasks } from "../data/Task";
 
-/* progress ring */
+
 function Circle({ value }) {
-  const deg = value * 3.6;
-
   return (
     <div className="task-circle">
       <div
-        className="task-circle-fill"
-        style={{ transform: `rotate(${deg}deg)` }}
+        className="task-circle-progress"
+        style={{ "--value": value }}
       />
       <span>{value}%</span>
     </div>
@@ -16,35 +15,9 @@ function Circle({ value }) {
 }
 
 export default function TasksCard() {
-  const tasks = [
-    {
-      title: "Update Employee Handbook",
-      dept: "Policy Development",
-      date: "Jun 15, 2027",
-      progress: 45,
-    },
-    {
-      title: "Finalize Quarterly Budget Review",
-      dept: "Financial Analysis",
-      date: "May 30, 2027",
-      progress: 68,
-    },
-    {
-      title: "Launch New Product Line",
-      dept: "Product Launch",
-      date: "Jul 1, 2027",
-      progress: 0,
-    },
-    {
-      title: "Upgrade Server Infrastructure",
-      dept: "Technical Infrastructure",
-      date: "Aug 20, 2027",
-      progress: 12,
-    },
-  ];
 
   return (
-    <Card className="dash-card h-100">
+    <Card className="dash-card border-0 rounded-4 h-100">
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <Card.Title className="mb-0">Tasks</Card.Title>

@@ -22,9 +22,4 @@ export const dashboardData = {
   { date: "14 Feb", present: 62, late: 25, absent: 13 },
   { date: "15 Feb", present: 52, late: 35, absent: 13 },
   ],
- employment: [
-    { name: "Permanent", value: 18, fill: "#FF6B4A" },
-    { name: "Contract", value: 7, fill: "#4dabf7" },
-    { name: "Intern", value: 5, fill: "#adb5bd" },
-  ],
 };
