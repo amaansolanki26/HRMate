@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { useState } from "react";
 import { Eye, EyeSlash } from "react-bootstrap-icons";
+import Logo from "../assets/Logo.svg";
 
 const Sign_Up = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -84,7 +85,7 @@ const Sign_Up = () => {
       <Row className="signup-row">
         <Col md={6} className="left-panel mt-5 pt-2 ">
             
-          <Image src="src\assets\Logo.svg" className="ms-5" />
+          <Image src={Logo} className="ms-5" />
           <h1 className="mt-5 lh-base fw-semibold ms-5">
             If opportunity doesn’t <br /> knock, build a{" "}
             <span className="text-primary ">door</span>.

@@ -19,6 +19,7 @@ import { useRef, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useDispatch } from "react-redux";
 import { logout } from "../store/slices/authSlice";
+import Logo from "../assets/Logo.svg";
 
 const RootLayout = () => {
 
@@ -45,7 +46,7 @@ const navigate = useNavigate();
         <Col>
           <Navbar expand="lg">
             <Navbar.Brand as={NavLink} to="/dashboard" className="fw-bold">
-              <Image src="src\assets\Logo.svg" height="28" className="" />
+              <Image src={Logo} height="28" className="" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">

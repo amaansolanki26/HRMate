@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { login } from "../store/slices/authSlice";
 import { useState } from "react";
 import { Eye, EyeSlash } from "react-bootstrap-icons";
+import Logo from "../assets/Logo.svg";
 
 const schema = yup.object({
   email: yup
@@ -29,7 +30,7 @@ const Sign_In = () => {
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(false);
 
   const {
     register,
@@ -87,7 +88,7 @@ const Sign_In = () => {
     <Container fluid className="signin-container">
       <Row className="signin-row">
         <Col md={6} className="mt-5">
-          <Image src="src\assets\Logo.svg" className="ms-5 mb-5 mt-4" />
+          <Image src={Logo} className="ms-5 mb-5 mt-4" />
           <h1 className="mt-5 lh-base fw-semibold ms-5 mb-4 mt-5 pt-5">
             Logut the past, Login <br /> to the{" "}
             <span className="text-primary ">new</span>!
