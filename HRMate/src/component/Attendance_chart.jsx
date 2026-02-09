@@ -22,7 +22,7 @@ export const Attendance_chart = ({ data }) => {
   return (
     <Card className="border-0 rounded-4 p-4 shadow-sm">
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <h6 className="fw-semibold mb-0">Attendance Overview</h6>
+        <h5 className="fw-500 mb-0">Attendance Overview</h5>
 
         <Dropdown>
           <Dropdown.Toggle

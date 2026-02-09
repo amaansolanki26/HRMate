@@ -20,7 +20,7 @@ const RecentActivity = () => {
         <div className="section-header small text-muted mb-2">Today</div>
         
         {activities.map((item, index) => (
-          <div className="timeline-item" key={index}>
+          <div className="timeline-item m-1" key={index}>
             <div className="timeline-dot-wrapper">
               <div className="timeline-dot"></div>
               {index !== activities.length - 1 && <div className="timeline-line"></div>}

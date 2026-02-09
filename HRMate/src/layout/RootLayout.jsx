@@ -142,9 +142,9 @@ const navigate = useNavigate();
               Copyright © 2024 HRMate
             </span>
 
-            <a href="#"  className="footer-link text-danger no-underline">Privacy Policy</a>
-            <a href="#" className="footer-link text-danger no-underline">Term and conditions</a>
-            <a href="#" className="footer-link text-danger no-underline">Contact</a>
+            <a href="#"  className="footer-link text-danger small no-underline">Privacy Policy</a>
+            <a href="#" className="footer-link text-danger small no-underline">Term and conditions</a>
+            <a href="#" className="footer-link text-danger small no-underline">Contact</a>
           </Col>
 
           <Col

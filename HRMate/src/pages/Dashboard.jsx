@@ -46,12 +46,10 @@ const Dashboard = () => {
       </Row>
 
     </Col>
-
-    
     <Col lg={3}>
       <Schedule_Calender data={Schedule}/>
     </Col>
-    <Row>
+    <Row className="g-1">
       <Col md={9}>
         <EmployeeOverview/> 
       </Col>

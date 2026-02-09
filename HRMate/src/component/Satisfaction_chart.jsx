@@ -1,4 +1,5 @@
 import { Card, Row, Col } from 'react-bootstrap';
+import { ThreeDots } from 'react-bootstrap-icons';
 
 const StatRow = ({ label, range, value }) => (
   <Row className="align-items-center ">
@@ -24,8 +25,8 @@ const SatisfactionCard = () => {
   return (
     <Card className="satisfaction-card border-0 rounded-4 shadow-sm p-2">
       <div className="d-flex justify-content-between align-items-center  mb-4">
-        <h5 className="m-0">Employee Satisfaction</h5>
-        <span className="text-muted" style={{ cursor: 'pointer', fontSize: '1.2rem' }}>...</span>
+        <h5 className="mt-2 fw-500">Employee Satisfaction</h5>
+        <span className="text-muted" ><ThreeDots/></span>
       </div>
 
       <div className="gauge-container ">
@@ -51,7 +52,7 @@ const SatisfactionCard = () => {
             strokeDashoffset={100.5 - (100.5 * npsScore) / 100}
           />
 
-          <text className="gauge-arc-labels">
+          <text className="gauge-arc-labels ">
             {labels.map((val, i) => (
               <textPath 
                 key={val} 

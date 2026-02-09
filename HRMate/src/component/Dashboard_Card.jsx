@@ -8,7 +8,7 @@ const Dashboard_Card = () => {
   const totalEmployees = employees.length;
   return (
     <Row className="mb-4 g-4">
-            <Col md={9} className="bg-success p-1 rounded-4">
+            <Col md={9} className="bg-success p-1 rounded-4 ">
            <Row className="align-items-center p-3">
             <Col md={4}>
               <p className="text-muted small text-nowrap mb-4 ">

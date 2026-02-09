@@ -1,5 +1,6 @@
 import { Card, Dropdown } from "react-bootstrap";
 import { tasks } from "../data/Task";
+import { ThreeDots } from "react-bootstrap-icons";
 
 
 function Circle({ value }) {
@@ -17,17 +18,12 @@ function Circle({ value }) {
 export default function TasksCard() {
 
   return (
-    <Card className="dash-card border-0 rounded-4 h-100">
+    <Card className="dash-card border-0 shadow-sm rounded-4 h-100">
       <Card.Body>
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <Card.Title className="mb-0">Tasks</Card.Title>
-
-          <Dropdown align="end">
-            <Dropdown.Toggle size="sm" variant="light">
-              •••
-            </Dropdown.Toggle>
-          </Dropdown>
-        </div>
+        <div className="d-flex justify-content-between align-items-center  mb-4">
+        <h5 className="mt-2 fw-500">Tasks</h5>
+        <span className="text-muted" ><ThreeDots/></span>
+      </div>
 
         {tasks.map((t, i) => (
           <div key={i} className="task-item">

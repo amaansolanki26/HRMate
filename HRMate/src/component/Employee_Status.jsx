@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import { employees } from "../data/employees";
+import { ThreeDots } from "react-bootstrap-icons";
 const EmploymentStatus = () => {
   const totalEmployees = employees.length;
   const categories = [
@@ -18,11 +19,11 @@ const EmploymentStatus = () => {
   let cumulativePercentage = 0;
 
   return (
-    <Card className="employment-status-card border-0 rounded-4 shadow-sm p-3">
-      <div className="d-flex justify-content-between align-items-center mb-5">
-        <h5 className="m-0 fw-normal">Employment Status</h5>
+    <Card className="employment-status-card border-0 rounded-4 shadow-sm p-3 ">
+      <div className="d-flex justify-content-between align-items-center mb-5 mt-2">
+        <h5 className="m-0 fw-500 ">Employment Status</h5>
         <span className="text-muted" style={{ cursor: "pointer" }}>
-          •••
+          <ThreeDots/>
         </span>
       </div>
 

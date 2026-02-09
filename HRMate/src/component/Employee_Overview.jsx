@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Table, Form, Card } from 'react-bootstrap';
+import { Table, Form, Card, InputGroup } from 'react-bootstrap';
 import { employees } from '../data/employees';
+import { Search } from 'react-bootstrap-icons';
 
 const EmployeeOverview = () => {
   const [deptFilter, setDeptFilter] = useState('All Department');
@@ -15,16 +16,26 @@ const EmployeeOverview = () => {
 
   return (
     
-          <Card className="border-0 shadow-sm p-4 rounded-4 mt-3 " >
+          <Card className="border-0 shadow-sm p-4 rounded-4 pb-5 pt-4 mt-3" >
             <div className="d-flex justify-content-between align-items-center mb-4">
               <div className="d-flex align-items-center gap-2">
                 <h5 className="m-0 fw-normal">Employees</h5>
                 <span className="text-muted small">({filteredEmployees.length})</span>
               </div>
-              <div className="d-flex gap-3">
-                <Form.Control placeholder="Search employee..." className="search-field" />
+              <div className="d-flex gap-3"><Form>
+                  <InputGroup className="rounded-3 overflow-hidden border ">
+                    <InputGroup.Text className="bg-white">
+                      <Search className="text-secondary" />
+                    </InputGroup.Text>
+
+                    <Form.Control
+                      type="search"
+                      placeholder="Search employee, job, etc"
+                    />
+                  </InputGroup>
+                </Form>
                 <Form.Select 
-                  className="filter-select" 
+                  className="filter-select text-secondary bg-dark" 
                   value={deptFilter}
                   onChange={(e) => setDeptFilter(e.target.value)}
                 >
@@ -33,12 +44,13 @@ const EmployeeOverview = () => {
               </div>
             </div>
             <div className='table-scroll '>
-                <Table responsive hover className="employee-table">
+                <Table responsive hover className="employee-table p-3 ">
               <thead>
                 <tr className="text-muted ">
                   <th className="fw-normal">Name</th>
                   <th className="fw-normal">Email</th>
                   <th className="fw-normal">Job Title</th>
+                  <th className="fw-normal">Level</th>
                   <th className="fw-normal">Department</th>
                   <th className="fw-normal">Status</th>
                 </tr>
@@ -52,8 +64,9 @@ const EmployeeOverview = () => {
                         {emp.fullName}
                       </div>
                     </td>
-                    <td className="text-muted small">{emp.email}</td>
-                    <td className="text-muted small">{emp.role}</td>
+                    <td className=" small">{emp.email}</td>
+                    <td className=" small">{emp.role}</td>
+                    <td className=" small">{emp.level}</td>
                     <td className="small">{emp.department}</td>
                     <td>
                       <span className={`status-pill ${emp.attendance.toLowerCase()}`}>
