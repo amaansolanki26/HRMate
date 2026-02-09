@@ -68,8 +68,6 @@ const Sign_Up = () => {
 
   localStorage.setItem("admins", JSON.stringify(admins));
 
-  alert("Admin registered successfully!");
-
   reset({
     fullName: "",
     email: "",
@@ -77,7 +75,6 @@ const Sign_Up = () => {
     confirmPassword: "",
     terms: false,
   });
-
   navigate('/')
 };
   return (

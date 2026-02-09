@@ -81,110 +81,112 @@ const Sign_In = () => {
         isAuthenticated: true,
       }),
     );
-
     navigate("/dashboard");
   };
   return (
-    <Container fluid className="signin-container">
-      <Row className="signin-row">
-        <Col md={6} className="mt-5">
-          <Image src={Logo} className="ms-5 mb-5 mt-4" />
-          <h1 className="mt-5 lh-base fw-semibold ms-5 mb-4 mt-5 pt-5">
-            Logut the past, Login <br /> to the{" "}
-            <span className="text-primary ">new</span>!
-          </h1>
-
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            <Row>
-              <Col md={8} className="ms-5">
-                <Form.Group controlId="email" className="mb-3">
-                  <Form.Label className="fw-semibold">
-                    E-mail Address
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    className="form-control"
-                    {...register("email")}
-                  />
-                  <div className="text-danger">{errors?.email?.message}</div>
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={8} className="ms-5">
-                <Form.Group
-                  controlId="password"
-                  className="mb-3 position-relative"
-                >
-                  <Form.Label className="fw-semibold">Password</Form.Label>
-
-                  <NavLink className="text-primary no-underline float-end">
-                    <small>Forget Password</small>
-                  </NavLink>
-
-                  <Form.Control
-                    type={showPassword ? "text" : "password"}
-                    {...register("password")}
-                  />
-
-                  <span
-                    className="password-toggle"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <Eye /> : <EyeSlash />}
-                  </span>
-
-                  <div className="text-danger">{errors?.password?.message}</div>
-                </Form.Group>
-              </Col>
-              <Form.Group className="ms-5 text-secondary">
-                <Form.Check
-                  type="checkbox"
-                  label="Remember my password"
-                  // checked={rememberMe}
-                  // onChange={(e) => setRememberMe(e.target.checked)}
-                />
-              </Form.Group>
-            </Row>
-            <Button
-              type="submit"
-              className="btn btn-primary login-btn text-light px-5 mt-5 py-3 ms-5 "
-            >
-              Login
-            </Button>
-            <p className="login-text mt-5 fw-semibold ms-5 mb-5">
-              Don't have an account?{" "}
-              <NavLink to="/sign-up" className="no-underline">
-                Sign Up
-              </NavLink>
-            </p>
-          </Form>
-        </Col>
-        <Col
-          md={6}
-          className="right-panel d-flex align-items-center justify-content-center "
-        >
-          <div className="text-center">
-            <Image
-              src="https://t4.ftcdn.net/jpg/17/14/31/63/240_F_1714316327_30h04dSvquO2ycSH59LhyXKHHRhmmwgN.jpg"
-              width={"731px"}
-              height={"565px"}
-              className="mb-5 hr-img"
-            />
-            <h1 className="fw-semibold lh-base mb-4">
-              Where <span className="highlight-underline">remote</span> teams{" "}
-              <br />
-              get work done
+      <Container fluid className="signin-container">
+        <Row className="signin-row">
+          <Col md={6} className="mt-5">
+            <Image src={Logo} className="ms-5 mb-5 mt-4" />
+            <h1 className="mt-5 lh-base fw-semibold ms-5 mb-4 mt-5 pt-5">
+              Logut the past, Login <br /> to the{" "}
+              <span className="text-primary ">new</span>!
             </h1>
-            <p className="fw-medium mb-4 ">
-              The online collaborative whiteboard platform to bring teams
-              <br />
-              together, anytime, anywhere.
-            </p>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <Row>
+                <Col md={8} className="ms-5">
+                  <Form.Group controlId="email" className="mb-3">
+                    <Form.Label className="fw-semibold">
+                      E-mail Address
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      className="form-control"
+                      {...register("email")}
+                    />
+                    <div className="text-danger">{errors?.email?.message}</div>
+                  </Form.Group>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={8} className="ms-5">
+                  <Form.Group
+                    controlId="password"
+                    className="mb-3 position-relative"
+                  >
+                    <Form.Label className="fw-semibold">Password</Form.Label>
+
+                    <NavLink className="text-primary no-underline float-end">
+                      <small>Forget Password</small>
+                    </NavLink>
+
+                    <Form.Control
+                      type={showPassword ? "text" : "password"}
+                      {...register("password")}
+                    />
+
+                    <span
+                      className="password-toggle"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? <Eye /> : <EyeSlash />}
+                    </span>
+
+                    <div className="text-danger">
+                      {errors?.password?.message}
+                    </div>
+                  </Form.Group>
+                </Col>
+                <Form.Group className="ms-5 text-secondary">
+                  <Form.Check
+                    type="checkbox"
+                    label="Remember my password"
+                    // checked={rememberMe}
+                    // onChange={(e) => setRememberMe(e.target.checked)}
+                  />
+                </Form.Group>
+              </Row>
+              <Button
+                type="submit"
+                className="btn btn-primary login-btn text-light px-5 mt-5 py-3 ms-5 "
+              >
+                Login
+              </Button>
+              <p className="login-text mt-5 fw-semibold ms-5 mb-5">
+                Don't have an account?{" "}
+                <NavLink to="/sign-up" className="no-underline">
+                  Sign Up
+                </NavLink>
+              </p>
+            </Form>
+          </Col>
+          <Col
+            md={6}
+            className="right-panel d-flex align-items-center justify-content-center "
+          >
+            <div className="text-center">
+              <Image
+                src="https://t4.ftcdn.net/jpg/17/14/31/63/240_F_1714316327_30h04dSvquO2ycSH59LhyXKHHRhmmwgN.jpg"
+                width={"731px"}
+                height={"565px"}
+                className="mb-5 hr-img"
+              />
+              <h1 className="fw-semibold lh-base mb-4">
+                Where <span className="highlight-underline">remote</span> teams{" "}
+                <br />
+                get work done
+              </h1>
+              <p className="fw-medium mb-4 ">
+                The online collaborative whiteboard platform to bring teams
+                <br />
+                together, anytime, anywhere.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    
   );
 };
 
